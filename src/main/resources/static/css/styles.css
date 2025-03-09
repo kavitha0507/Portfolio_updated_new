@@ -1,0 +1,99 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Portfolio Header styles */
+.portfolio-title {
+    color: blue; /* Set text color to blue */
+    text-align: center; /* Center the text horizontally */
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+    margin-top: 20px; /* Add some space at the top */
+}
+
+
+
+.portfolio-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-header p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Projects section styles */
+.projects-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #2d3e50;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d3e50;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
