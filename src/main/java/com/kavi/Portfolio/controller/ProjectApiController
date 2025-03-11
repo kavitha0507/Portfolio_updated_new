@@ -1,1 +1,42 @@
+package com.kavi.Portfolio.controller;
+
+import com.kavi.Portfolio.model.Project;
+import com.kavi.Portfolio.repository.ProjectRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/projects")  // Separate base path for API
+public class ProjectApiController {
+
+    @Autowired
+    private ProjectRepository projectRepository;
+
+    // Get all projects (JSON response)
+    @GetMapping
+    public List<Project> getAllProjects() {
+        return projectRepository.findAll();
+    }
+
+    // Add a new project (JSON request & response)
+    @PostMapping("/add")
+    public Project addProject(@RequestBody Project project) {
+        return projectRepository.save(project);
+    }
+
+    // Update a project
+    @PutMapping("/edit/{id}")
+    public Project updateProject(@PathVariable Long id, @RequestBody Project project) {
+        project.setId(id);
+        return projectRepository.save(project);
+    }
+
+    // Delete a project
+    @DeleteMapping("/delete/{id}")
+    public void deleteProject(@PathVariable Long id) {
+        projectRepository.deleteById(id);
+    }
+}
 
